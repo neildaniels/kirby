@@ -500,7 +500,7 @@ class ApiTest extends TestCase
             'code'      => 500,
             'exception' => 'Exception',
             'key'       => null,
-            'file'      => '/' . basename(__FILE__),
+            'file'      => basename(__FILE__),
             'line'      => __LINE__ - 18,
             'details'   => [],
             'route'     => 'test'
@@ -578,7 +578,7 @@ class ApiTest extends TestCase
             'code'      => 404,
             'exception' => 'Kirby\\Exception\\NotFoundException',
             'key'       => 'error.test',
-            'file'      => '/' . basename(__FILE__),
+            'file'      => basename(__FILE__),
             'line'      => __LINE__ - 24,
             'details'   => ['a' => 'A'],
             'route'     => 'test',
