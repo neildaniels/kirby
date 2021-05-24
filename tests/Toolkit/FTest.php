@@ -160,10 +160,10 @@ class FTest extends TestCase
     public function testRelativePath()
     {
         $path = F::relativepath(__FILE__, __DIR__);
-        $this->assertEquals(basename(__FILE__), $path);
+        $this->assertEquals('/' . basename(__FILE__), $path);
         
         $path = F::relativepath(__FILE__, __DIR__ . '/');
-        $this->assertEquals(basename(__FILE__), $path);
+        $this->assertEquals('/' . basename(__FILE__), $path);
     }
 
     public function testRelativePathWithEmptyBase()
@@ -208,7 +208,7 @@ class FTest extends TestCase
         $in   = 'C:/xampp/htdocs';
 
         $path = F::relativepath($file, $in);
-        $this->assertEquals('index.php', $path);
+        $this->assertEquals('/index.php', $path);
     }
 
     public function testSymlink()
